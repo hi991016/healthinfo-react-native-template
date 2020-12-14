@@ -112,6 +112,7 @@ function StackHome({ navigation }) {
 const ActivityStack = createStackNavigator()
 
 function StackActivity({ navigation, route }) {
+    // I can try but error =.=
     // if (route.state && route.state.routeNames[route.state.index] === "Running") {
     //     navigation.setOptions({tabBarVisible: false})
     // } else {
@@ -124,16 +125,18 @@ function StackActivity({ navigation, route }) {
                     headerShown: false,
                 }}
             />
-            <ActivityStack.Screen name="Running" component={RunScreen}
+            {/* <ActivityStack.Screen name="Running" component={RunScreen}
                 options={{
+                    headerShown: false,
                     headerStyle: {
                         backgroundColor: "#e1e6ea",
                     },
                     headerTitleStyle: { color: '#434c73' },
                     headerTitleAlign: "center",
                     headerTintColor: '#434c73',
+                    tabBarVisible: false,
                 }}
-            />
+            /> */}
         </ActivityStack.Navigator>
         
     )

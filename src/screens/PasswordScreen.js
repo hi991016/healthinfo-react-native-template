@@ -8,12 +8,7 @@ const PasswordScreen = () => {
             <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
             <SafeAreaView style={styles.container}>
                 <View style={styles.custom}>
-                    <ScrollView
-                    showsVerticalScrollIndicator={false}
-                    showsHorizontalScrollIndicator={false}                      
-                    >
 
-                    </ScrollView>
                 </View>
             </SafeAreaView>
         </>
@@ -23,16 +18,16 @@ const PasswordScreen = () => {
 export default PasswordScreen
 
 const styles = StyleSheet.create({
-    // container: {
-    //     position:'absolute',
-    //     left:0,
-    //     right:0,
-    //     top:0,
-    //     height:'100%',
-    //     backgroundColor:'#000',
-    // },
+    container: {
+        position:'absolute',
+        left:0,
+        right:0,
+        top:0,
+        height:'100%',
+        backgroundColor:'#000',
+    },
     custom: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#fff',
         height:'100%',
         paddingBottom: 5,
         borderBottomLeftRadius: 44,

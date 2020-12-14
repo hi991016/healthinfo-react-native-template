@@ -50,9 +50,9 @@ class IdentifyScreen extends React.Component {
                                 <Text style={this.state.activeIndex === 2 ? styles.textActive : styles.txt}>Non-binary</Text>
                             </TouchableOpacity>
                         </View>
-                        <View style={{marginTop: 160}}>
+                        <View style={{flex: 1, marginTop: 120}}>
                             <TouchableOpacity style={styles.customButton} onPress={() => this.props.navigation.navigate('TallScreen')}>
-                                <Text style={{color: '#fff', fontSize: 18, fontWeight: '700'}}>Continue</Text>
+                                <Text style={{color: '#fff', fontSize: 16, fontWeight: '700'}}>Continue</Text>
                             </TouchableOpacity>
                         </View>
                     </ScrollView>
@@ -65,8 +65,8 @@ class IdentifyScreen extends React.Component {
 function TallScreen({navigation}) {
     let animation = useRef(new Animated.Value(0));
     const width = animation.current.interpolate({
-      inputRange: [0, 100],
-      outputRange: ["40%", "100%"],
+      inputRange: [33, 100],
+      outputRange: ["33%", "100%"],
       extrapolate: "clamp"
     })
     return (
@@ -118,9 +118,9 @@ function TallScreen({navigation}) {
                     />
                     <Text style={{marginLeft: 10, fontSize: 30, color: '#233249'}}>cm</Text>
                 </View>
-                <View style={{alignSelf: 'center', marginTop: 147}}>
+                <View style={{flex: 1, marginTop: 110}}>
                     <TouchableOpacity style={styles.customButton} onPress={() => navigation.navigate('WeightScreen')}>
-                        <Text style={{color: '#fff', fontSize: 18, fontWeight: '700'}}>Continue</Text>
+                        <Text style={{color: '#fff', fontSize: 16, fontWeight: '700'}}>Continue</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
@@ -131,8 +131,8 @@ function TallScreen({navigation}) {
 function WeightScreen({navigation}) {
     let animation = useRef(new Animated.Value(0));
     const width = animation.current.interpolate({
-      inputRange: [0, 100],
-      outputRange: ["80%", "100%"],
+      inputRange: [66, 100],
+      outputRange: ["66%", "100%"],
       extrapolate: "clamp"
     })
     return (
@@ -146,12 +146,12 @@ function WeightScreen({navigation}) {
                             <MaterialIcons name='arrow-back-ios' color='#233249' size={25} style={styles.iconBack} />
                     </TouchableOpacity>
                 </View>
-                <View style={styles.progressBar}>
+                <Animated.View style={styles.progressBar}>
                     <Animated.View 
                     style={[StyleSheet.absoluteFill], 
-                    {backgroundColor: "#44CAAC", width,borderRadius: 100 }}
+                    {backgroundColor: "#44CAAC", width,borderRadius: 100}}
                     />
-                </View>
+                </Animated.View>
                 <View style={{marginTop: 40}}>
                     <Text style={styles.title}>How much do you weight?</Text>
                     <View>
@@ -161,7 +161,7 @@ function WeightScreen({navigation}) {
                 </View>
                 <View style={styles.picker}>
                     <ScrollPicker
-                    dataSource={["53", "54", "55", "56", "57", "58"]}
+                    dataSource={["52, 53", "54", "55", "56", "57", "58"]}
                     selectedIndex={2}
                     renderItem={(data, index) => {
                         // return(
@@ -184,9 +184,9 @@ function WeightScreen({navigation}) {
                     />
                     <Text style={{marginLeft: 10, fontSize: 30, color: '#233249'}}>kg</Text>
                 </View>
-                <View style={{alignSelf: 'center', marginTop: 147}}>
+                <View style={{flex: 1, marginTop: 110}}>
                     <TouchableOpacity style={styles.customButton} onPress={() => navigation.navigate('DoitScreen')}>
-                        <Text style={{color: '#fff', fontSize: 18, fontWeight: '700'}}>Continue</Text>
+                        <Text style={{color: '#fff', fontSize: 16, fontWeight: '700'}}>Continue</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
@@ -216,10 +216,10 @@ function DoitScreen({navigation}) {
                         <Text style={styles.doitTitle}>Wohoo 🎉</Text>
                         <Text style={styles.doitTitle}>Now let’s get you movin’</Text>
                     </View>
-                    <View style={{alignSelf: 'center', marginTop: 288}}>
-                    <TouchableOpacity style={styles.customButton} onPress={() => navigation.navigate('DrawerHome')}>
-                        <Text style={{color: '#fff', fontSize: 18, fontWeight: '700'}}>Let's do it!</Text>
-                    </TouchableOpacity>
+                    <View style={{alignItems: 'center', flex: 1, marginTop: 250}}>
+                        <TouchableOpacity style={styles.customButton} onPress={() => navigation.navigate('DrawerHome')}>
+                            <Text style={{color: '#fff', fontSize: 16, fontWeight: '700'}}>Let's do it!</Text>
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
             </ImageBackground>
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: 330,
-        height: 60,
+        height: 50,
         flexDirection: "row",
         marginHorizontal: 20,
         marginTop: 25,

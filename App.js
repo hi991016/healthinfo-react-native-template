@@ -24,6 +24,7 @@ import LoginScreen from './src/screens/LoginScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
 import FriendsList from './src/drawer/FriendListScreen';
+import Running from './src/screens/RunScreen';
 import Loader from './src/component/Loader';
 
 const Drawer = createDrawerNavigator();
@@ -38,6 +39,8 @@ function DrawerHome() {
             <Drawer.Screen name="Notification" component={Notification} />
             <Drawer.Screen name="FriendsList" component={FriendsList} />
             <Drawer.Screen name="Setting" component={Setting} />
+            <Drawer.Screen name="Running" component={Running} />
+            {/* I can't hide the bottom tab RunScreen so I chose this option. hehe */}
         </Drawer.Navigator>
     </>
   );

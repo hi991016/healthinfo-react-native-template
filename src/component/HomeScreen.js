@@ -1,6 +1,7 @@
 import React from 'react'
 import { Image, SafeAreaView, StatusBar, StyleSheet, Text, View,} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 import MenuItem from './MenuItem'
 
 const HomeScreen = ({navigation}) => {
@@ -21,8 +22,15 @@ const HomeScreen = ({navigation}) => {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View>
-                    <Text style={styles.title}>Activity</Text>
+                <View style={styles.refresh}>
+                    <View>
+                        <Text style={styles.title}>Activity</Text>
+                    </View>
+                    <View>
+                        <TouchableOpacity style={styles.iconRef}>
+                            <SimpleLineIcons name="refresh" color='#e52a2a' size={28} /> 
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 <MenuItem />
             </View>
@@ -61,8 +69,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 30,
         fontWeight: '700',
-        paddingHorizontal: 30,
-        marginTop: 30,
     },
     custom: {
         backgroundColor: '#FFF',
@@ -70,5 +76,17 @@ const styles = StyleSheet.create({
         paddingBottom: 5,
         borderBottomLeftRadius: 44,
         borderBottomRightRadius: 44,
+    },
+    refresh: {
+        paddingHorizontal: 30,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: 30,
+    },
+    iconRef: {
+        backgroundColor: '#fff', //e52a2a
+        padding: 5,
+        borderRadius: 8,
     }
 })

@@ -26,9 +26,9 @@ export default class LaddingScreen extends React.Component {
                                     <Text style={styles.desc}>It's the only place you have to live.</Text>
                                 </View>
                                 <TouchableOpacity activeOpacity={0.8} onPress={() => { this.props.navigation.navigate("LoginSplash")}}>
-                                <View style={styles.customButton}>
-                                    <Text style={{ color: "#fff", fontSize: 16, fontWeight: '700' }} >Get Started</Text>
-                                </View>
+                                    <View style={styles.customButton}>
+                                        <Text style={{ color: "#fff", fontSize: 16, fontWeight: '700' }} >Get Started</Text>
+                                    </View>
                                 </TouchableOpacity>
                             </View>
                         </ScrollView>
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     introduce: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 330,
+        marginTop: 280,
     },
     title: {
         color: '#fff',
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     customButton: {
-        marginTop: 28,
+        marginTop: 35,
         backgroundColor: "#44CAAC",
         alignItems: "center",
         justifyContent: "center",

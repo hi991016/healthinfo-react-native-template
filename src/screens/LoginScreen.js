@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
-        height: 60,
+        height: 55,
         flexDirection: "row",
         marginHorizontal: 20,
         marginTop: 25,
@@ -144,8 +144,8 @@ const styles = StyleSheet.create({
     textInput: {
         flex: 1,
         backgroundColor: 'transparent',
-        fontSize: 18,
-        height: 60,
+        fontSize: 15,
+        height: 55,
         borderColor: 'transparent',
     },
     buttonLogin: {
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
-        height: 60,
+        height: 55,
         flexDirection: "row",
         marginHorizontal: 20,
         marginTop: 25,

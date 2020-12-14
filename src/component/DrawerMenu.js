@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, ImageBackground, Image, StatusBar, SafeAreaView } from 'react-native';
+import { View, StyleSheet, ImageBackground, Image, SafeAreaView } from 'react-native';
 import {
     Title,
     Caption,
@@ -22,7 +22,7 @@ const DrawerMenu = (props) => {
                     <View style={styles.drawerContent}>
                         <ImageBackground
                             source={require('../assets/drawer.jpg')}
-                            style={{ width: undefined, paddingBottom: 40, marginTop: -55 }}
+                            style={{ width: undefined, paddingBottom: 40, marginTop: -80 }}
                             resizeMode='cover'
                         >
                             <View style={styles.userInfo}>

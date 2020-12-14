@@ -37,7 +37,7 @@ export default class LoginSplash extends React.Component {
                             <Text style={styles.desc}>Welcome to Health Info. First thing first</Text>
                             <Text style={styles.desc}>log in or sign up so that we can begin.</Text>
                         </View>
-                        <TouchableOpacity style={styles.buttonGoogle} activeOpacity={0.9}>
+                        <TouchableOpacity style={styles.buttonGoogle} activeOpacity={0.9} onPress={() => this.props.navigation.navigate('DrawerHome')}>
                                 <Image style={styles.iconGoolge} source={require('../assets/google.png')}/>
                                 <Text style={styles.textGoogle}>Continue with Goolge</Text>
                         </TouchableOpacity>
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 60,
+        height: 55,
         marginHorizontal: 20,
         marginTop: 20,
         borderRadius: 10,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         borderColor: '#252427',
         borderRadius: 10,
-        height: 60,
+        height: 55,
         marginHorizontal: 20,
         marginTop: 10,
     },
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
-        height: 60,
+        height: 55,
         flexDirection: "row",
         marginHorizontal: 20,
         marginTop: 20,

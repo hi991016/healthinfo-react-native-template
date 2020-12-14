@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Carousel from "react-native-anchor-carousel";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const ActivityScreen = ({ navigation }) => {
   const [background, setBackground] = useState({
@@ -19,7 +20,7 @@ const ActivityScreen = ({ navigation }) => {
       "https://cutewallpaper.org/21/cute-wallpaper-for-dp/Images-of-Whatsapp-Wallpaper-Whatsapp-Dp-Images-Download.jpg",
     name: "Walking",
     desc:
-      "Walking is a great way to improve or maintain your overall health. Just 30 minutes every day can increase cardiovascular fitness, strengthen bones, reduce excess body fat, and boost muscle power and endurance.",
+      "Walking is a great way to improve or maintain your overall health. Just 30 minutes every day can increase cardiovascular fitness, strengthen bones, and boost muscle power and endurance.",
   });
 
   const [gallery, setgallery] = useState([
@@ -28,7 +29,7 @@ const ActivityScreen = ({ navigation }) => {
         "https://cutewallpaper.org/21/cute-wallpaper-for-dp/Images-of-Whatsapp-Wallpaper-Whatsapp-Dp-Images-Download.jpg",
       title: "WALKING",
       desc:
-        "Walking is a great way to improve or maintain your overall health. Just 30 minutes every day can increase cardiovascular fitness, strengthen bones, reduce excess body fat, and boost muscle power and endurance.",
+        "Walking is a great way to improve or maintain your overall health. Just 30 minutes every day can increase cardiovascular fitness, strengthen bones, and boost muscle power and endurance.",
       key: "1,",
     },
     {
@@ -36,7 +37,7 @@ const ActivityScreen = ({ navigation }) => {
         "https://images.unsplash.com/photo-1559166631-ef208440c75a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=80",
       title: "RUNNING",
       desc:
-        "Runners have increased lung capacity from logging mile after mile. Those strong lungs come in handy if you ever find yourself on the other side of the race as a spectator. A runner’s WOOHOO! is loud and proud.",
+        "Runners have increased lung capacity from logging mile after mile. Those strong lungs come in handy if you ever find yourself on the other side of the race as a spectator.",
       key: "2,",
     },
     {
@@ -94,8 +95,15 @@ const ActivityScreen = ({ navigation }) => {
                 showsHorizontalScrollIndicator={false}     
             >
               <View style={styles.headerContainer}>
-                <Text style={styles.title}>Choose your</Text>
-                <Text style={styles.title}>Activity</Text>
+                <View>
+                  <Text style={styles.title}>Choose your</Text>
+                  <Text style={styles.title}>Activity</Text>
+                </View>
+                <View style={styles.iconCompetition}>
+                  <TouchableOpacity activeOpacity={0.5} onPress={() => { navigation.navigate('FriendsList') }}>
+                      <MaterialCommunityIcons name="sword-cross" color='#fff' size={35} /> 
+                  </TouchableOpacity>
+                </View>
               </View>
               <View style={styles.carouselContentContainerView}>
                 <Carousel
@@ -170,6 +178,9 @@ const styles = StyleSheet.create({
         paddingTop: 50,
         paddingHorizontal: 30,
         marginBottom: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
     title: {
         color: "#fff",
@@ -226,4 +237,9 @@ const styles = StyleSheet.create({
         width: 120,
         height: 40,
     },
+    iconCompetition: {
+        backgroundColor: '#e52a2a',
+        padding: 12,
+        borderRadius: 14,
+    }
 });
