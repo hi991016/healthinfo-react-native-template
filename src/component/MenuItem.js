@@ -1,7 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native'
+import { RefreshControl, StyleSheet, Text, View, Image, SafeAreaView } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 import * as Animatable from 'react-native-animatable';
+
+const wait = (timeout) => {
+    return new Promise(resolve => {
+      setTimeout(resolve, timeout);
+    });
+}
 
 const data = [
         {
@@ -35,6 +41,13 @@ const data = [
 ]
 
 const MenuItem = () => {
+    const [refreshing, setRefreshing] = React.useState(false);
+
+    const onRefresh = React.useCallback(() => {
+      setRefreshing(true);
+  
+      wait(1500).then(() => setRefreshing(false));
+    }, []);
     const renderItem = ({item}) => {
         return (
             <Animatable.View animation='zoomIn' style={styles.item}>
@@ -60,6 +73,9 @@ const MenuItem = () => {
                 showsVerticalScrollIndicator={false}
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={styles.flatlist}
+                refreshControl={
+                    <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+                }   
             />
         </SafeAreaView>
     )
