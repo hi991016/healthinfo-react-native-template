@@ -11,6 +11,7 @@ import EditProfileScreen from '../screens/EditProfileScreen';
 import StatisticsScreen from '../screens/StatisticScreen';
 import ActivityScreen from '../screens/ActivityScreen';
 import RunScreen from '../screens/RunScreen';
+import EndActivityScreen from '../screens/EndActivityScreen';
 
 const Tabs = AnimatedTabBarNavigator()
 
@@ -125,6 +126,11 @@ function StackActivity({ navigation, route }) {
                     headerShown: false,
                 }}
             />
+            {/* <ActivityStack.Screen name="EndActivity" component={EndActivityScreen}
+                options={{
+                    headerShown: true,
+                }}
+            /> */}
             {/* <ActivityStack.Screen name="Running" component={RunScreen}
                 options={{
                     headerShown: false,

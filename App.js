@@ -26,6 +26,7 @@ import SignUpScreen from './src/screens/SignUpScreen';
 import FriendsList from './src/drawer/FriendListScreen';
 import Running from './src/screens/RunScreen';
 import Loader from './src/component/Loader';
+import EndActivityScreen from './src/screens/EndActivityScreen';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -40,6 +41,7 @@ function DrawerHome() {
             <Drawer.Screen name="FriendsList" component={FriendsList} />
             <Drawer.Screen name="Setting" component={Setting} />
             <Drawer.Screen name="Running" component={Running} />
+            <Drawer.Screen name="EndActivity" component={EndActivityScreen} />
             {/* I can't hide the bottom tab RunScreen so I chose this option. hehe */}
         </Drawer.Navigator>
     </>

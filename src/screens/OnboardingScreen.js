@@ -286,6 +286,15 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginHorizontal: 20,
         marginTop: 15,
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 1,
+            height: 1,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 1,
+        elevation: 4,
         marginBottom: 8,
     },
     btn:{
