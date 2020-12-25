@@ -86,6 +86,14 @@ const DrawerMenu = (props) => {
                                 onPress={() => { props.navigation.navigate('FriendsList') }}
                                 labelStyle={{ color: '#1f2233' }}
                             />
+                            <DrawerItem
+                                icon={({ size }) => (
+                                    <Ionicons name="search-outline" color='#1f2233' size={size} />
+                                )}
+                                label="Search"
+                                onPress={() => { props.navigation.navigate('Search') }}
+                                labelStyle={{ color: '#1f2233' }}
+                            />
                             {/* <Drawer.Section style={{ marginTop: 5 }}></Drawer.Section> */}
                         </Drawer.Section>
                     </View>

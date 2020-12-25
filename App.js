@@ -24,6 +24,7 @@ import LoginScreen from './src/screens/LoginScreen';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
 import FriendsList from './src/drawer/FriendListScreen';
+import Search from './src/drawer/SearchScreen';
 import Running from './src/screens/RunScreen';
 import Loader from './src/component/Loader';
 import EndActivityScreen from './src/screens/EndActivityScreen';
@@ -36,9 +37,10 @@ function DrawerHome() {
     <>
         <Drawer.Navigator drawerContent={props => <DrawerMenu {...props} />}>
             <Drawer.Screen name="HomeDrawer" component={AppNavigation} />
-            <Drawer.Screen name="Statistic" component={Statistics} />
+            <Drawer.Screen name="Diary" component={Statistics} />
             <Drawer.Screen name="Notification" component={Notification} />
             <Drawer.Screen name="FriendsList" component={FriendsList} />
+            <Drawer.Screen name="Search" component={Search} />
             <Drawer.Screen name="Setting" component={Setting} />
             <Drawer.Screen name="Running" component={Running} />
             <Drawer.Screen name="EndActivity" component={EndActivityScreen} />

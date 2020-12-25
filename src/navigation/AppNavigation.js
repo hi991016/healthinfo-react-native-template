@@ -10,8 +10,6 @@ import PasswordScreen from '../screens/PasswordScreen';
 import EditProfileScreen from '../screens/EditProfileScreen';
 import StatisticsScreen from '../screens/StatisticScreen';
 import ActivityScreen from '../screens/ActivityScreen';
-import RunScreen from '../screens/RunScreen';
-import EndActivityScreen from '../screens/EndActivityScreen';
 
 const Tabs = AnimatedTabBarNavigator()
 
