@@ -43,13 +43,13 @@ export default class RunScreen extends Component {
       }
      
      
-      onButtonStop = () => {
+      onButtonPause = () => {
         clearInterval(this.state.timer);
         this.setState({startDisable : false})
       }
      
      
-      onButtonClear = () => {
+      onButtonStop = () => {
         clearInterval(this.state.timer);
         this.setState({
           timer: null,
@@ -59,7 +59,7 @@ export default class RunScreen extends Component {
         });
         this.props.navigation.navigate('EndActivity')
     }
-
+    
     render() {
         return (
             <>
@@ -90,7 +90,7 @@ export default class RunScreen extends Component {
                                         </TouchableOpacity>  
                                         <TouchableOpacity 
                                         activeOpacity={0.5} 
-                                        onPress={this.onButtonClear}
+                                        onPress={this.onButtonStop}
                                         style={[styles.iconOval2, { backgroundColor:  this.state.startDisable ? '#000' : '#e48c12'}]} 
                                         >
                                             <Ionicons name='stop' size={30}  color={this.state.startDisable? '#fff' : '#000'}/>

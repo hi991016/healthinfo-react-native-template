@@ -161,7 +161,7 @@ function WeightScreen({navigation}) {
                 </View>
                 <View style={styles.picker}>
                     <ScrollPicker
-                    dataSource={["52, 53", "54", "55", "56", "57", "58"]}
+                    dataSource={["52", "53", "54", "55", "56", "57", "58"]}
                     selectedIndex={2}
                     renderItem={(data, index) => {
                         // return(

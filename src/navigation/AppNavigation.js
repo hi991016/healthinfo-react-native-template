@@ -172,22 +172,12 @@ function StackProfile({ navigation }) {
             />
             <ProfileStack.Screen name="EditProfile" component={EditProfileScreen}
                 options={{
-                    headerStyle: {
-                        backgroundColor: "#e1e6ea",
-                    },
-                    headerTitleStyle: { color: '#434c73' },
-                    headerTitleAlign: "center",
-                    headerTintColor: '#434c73',
+                    headerShown: false,
                 }}
             />
             <ProfileStack.Screen name="ChangePassword" component={PasswordScreen}
                 options={{
-                    headerStyle: {
-                        backgroundColor: "#e1e6ea",
-                    },
-                    headerTitleStyle: { color: '#434c73' },
-                    headerTitleAlign: "center",
-                    headerTintColor: '#434c73',
+                    headerShown: false,
                 }}
             />
         </ProfileStack.Navigator>

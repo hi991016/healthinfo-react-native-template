@@ -41,6 +41,9 @@ const ProfileScreen = ({navigation}) => {
                         <TouchableOpacity onPress={() => { navigation.navigate('ChangePassword') }}>
                             <Text style={ { color: "#1f2233", fontSize: 19, marginTop: 18 }}>Change Password</Text>
                         </TouchableOpacity>
+                        <TouchableOpacity onPress={() => { navigation.navigate('LoginSplash') }}>
+                            <Text style={ { color: "red", fontSize: 19, marginTop: 18 }}>Log out</Text>
+                        </TouchableOpacity>
                     </View>
                     </ScrollView>
                 </View>
