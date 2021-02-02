@@ -60,7 +60,7 @@ const FriendListScreen = ({navigation}) => {
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <View style={{marginRight: 20}}>
                                     <Image 
-                                    source={{uri: 'https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/100508760_1233479083686720_3321005447846035456_o.jpg?_nc_cat=103&ccb=2&_nc_sid=8bfeb9&_nc_ohc=8JD6edSzllgAX99F_gR&_nc_ht=scontent.fsgn2-2.fna&oh=f1e2f74fea8324970572292e43280ce6&oe=6003AAC2'}} 
+                                    source={{uri: 'https://scontent.fsgn5-1.fna.fbcdn.net/v/t1.0-9/142628492_1446887289012564_9141674745846238007_n.jpg?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=uJ8v9AmHgd8AX9kts_T&_nc_ht=scontent.fsgn5-1.fna&oh=71d30b74fe3b5a91855e849154e9a6cc&oe=603F0FE2'}} 
                                     style={{ width: 54, height: 54, borderRadius: 120 }} 
                                     />
                                 </View>
@@ -82,7 +82,7 @@ const FriendListScreen = ({navigation}) => {
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <View style={{marginRight: 20}}>
                                     <Image 
-                                    source={{uri: 'https://scontent.fsgn2-3.fna.fbcdn.net/v/t31.0-8/28619103_2034912613428758_7493420670478077899_o.jpg?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=AH3j7_AvvuoAX_vX7OK&_nc_ht=scontent.fsgn2-3.fna&oh=5a98c2b51795e9dbdcaf46e4078b5851&oe=60010023'}} 
+                                    source={{uri: 'https://scontent.fsgn5-6.fna.fbcdn.net/v/t31.0-8/28619103_2034912613428758_7493420670478077899_o.jpg?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=RrybHr2rMN8AX_DGvVK&_nc_ht=scontent.fsgn5-6.fna&oh=6c4626c2050c28e40507bfdb9e896470&oe=603C53A3'}} 
                                     style={{ width: 54, height: 54, borderRadius: 120 }} 
                                     />
                                 </View>
@@ -104,7 +104,7 @@ const FriendListScreen = ({navigation}) => {
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <View style={{marginRight: 20}}>
                                     <Image 
-                                    source={{uri: 'https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.0-9/32149157_1010260882460261_5593137430552117248_o.jpg?_nc_cat=102&ccb=2&_nc_sid=174925&_nc_ohc=f6quFLKqmu8AX_WC3QS&_nc_ht=scontent.fsgn2-5.fna&oh=520c23995967304c6d8408267d33007d&oe=60031122'}} 
+                                    source={{uri: 'https://scontent.fsgn5-4.fna.fbcdn.net/v/t1.0-9/32149157_1010260882460261_5593137430552117248_o.jpg?_nc_cat=102&ccb=2&_nc_sid=174925&_nc_ohc=iBQdooEpK7sAX-PiVAV&_nc_ht=scontent.fsgn5-4.fna&oh=138e9bd79a0b0926b1c66aa4b8c67cf1&oe=603E64A2'}} 
                                     style={{ width: 54, height: 54, borderRadius: 120 }} 
                                     />
                                 </View>

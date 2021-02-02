@@ -33,7 +33,7 @@ function FriendRequest({navigation}) {
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <View style={{marginRight: 20}}>
                                     <Image 
-                                    source={{uri: 'https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/29597226_601217733565084_99387188199077288_n.jpg?_nc_cat=105&ccb=2&_nc_sid=174925&_nc_ohc=-QvKDiSRvnUAX-zdluc&_nc_ht=scontent.fsgn2-1.fna&oh=f674b301fdea27cddb1fa3b9361b2ae9&oe=60002934'}} 
+                                    source={{uri: 'https://scontent.fsgn5-6.fna.fbcdn.net/v/t1.0-9/19554580_474532292900296_3243303330337493207_n.jpg?_nc_cat=109&ccb=2&_nc_sid=174925&_nc_ohc=qYyli2ZTpwUAX9omiKy&_nc_ht=scontent.fsgn5-6.fna&oh=d059ad80b5db93340371767bf19f5757&oe=603DC7FE'}} 
                                     style={{ width: 54, height: 54, borderRadius: 120 }} 
                                     />
                                 </View>
@@ -55,7 +55,7 @@ function FriendRequest({navigation}) {
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <View style={{marginRight: 20}}>
                                     <Image 
-                                    source={{uri: 'https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.0-9/121716522_1521115961409052_6831076424541364234_o.jpg?_nc_cat=1&ccb=2&_nc_sid=09cbfe&_nc_ohc=WR_bMGUUmhMAX8oUvNI&_nc_oc=AQknYQM_XoiQH_C7Yw-F6jAZM975jdluWGejN2NiF9aFreCxU8g0qKod776ZgksStucJRRBej59w8rE1BNW3RJ8S&_nc_ht=scontent.fsgn2-3.fna&oh=dba371d685e4cc202ee87af59add1a9f&oe=60027785'}} 
+                                    source={{uri: 'https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.0-9/121716522_1521115961409052_6831076424541364234_o.jpg?_nc_cat=1&ccb=2&_nc_sid=09cbfe&_nc_ohc=sT1rpDyViEQAX9f0m6M&_nc_oc=AQm1vV2kXsiBz9wheCbNYlrtuWmCbtrIkwMPJIV-_Vl8RBurt_KtfRdPDry157DYXrw&_nc_ht=scontent.fsgn5-3.fna&oh=9db727a2f3b8aa8ea1c1bd92e9c09574&oe=603DCB05'}} 
                                     style={{ width: 54, height: 54, borderRadius: 120 }} 
                                     />
                                 </View>
@@ -77,12 +77,12 @@ function FriendRequest({navigation}) {
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <View style={{marginRight: 20}}>
                                     <Image 
-                                    source={{uri: 'https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.0-9/12832390_1084455328242636_6273351660990200512_n.png?_nc_cat=109&ccb=2&_nc_sid=09cbfe&_nc_ohc=NSfqLo6AIGoAX-OliAc&_nc_ht=scontent.fsgn2-4.fna&oh=99233a1df56547d6f4a3924859c1820b&oe=600206D8'}} 
+                                    source={{uri: 'https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.0-9/131294218_4220110181335986_7140461812444362762_o.jpg?_nc_cat=1&ccb=2&_nc_sid=09cbfe&_nc_ohc=mdtXDXSUuYYAX9TXiF6&_nc_ht=scontent.fsgn5-3.fna&oh=85c9d06596bc0902a55aa78541e895ae&oe=603DA390'}} 
                                     style={{ width: 54, height: 54, borderRadius: 120 }} 
                                     />
                                 </View>
                                 <View>
-                                    <Text style={{ color: '#000', fontSize: 16, fontWeight: '700' }}>Marco Reus</Text>
+                                    <Text style={{ color: '#000', fontSize: 16, fontWeight: '700' }}>Son Tung M-TP</Text>
                                     <Text style={{ color: '#AEAEAE', fontSize: 14 }}>78 kg / 183 cm</Text>
                                 </View>
                             </View>
@@ -125,7 +125,7 @@ function ChallengeRequest({navigation}) {
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <View style={{marginRight: 20}}>
                                     <Image 
-                                    source={{uri: 'https://scontent.fsgn2-3.fna.fbcdn.net/v/t31.0-8/28619103_2034912613428758_7493420670478077899_o.jpg?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=AH3j7_AvvuoAX_vX7OK&_nc_ht=scontent.fsgn2-3.fna&oh=5a98c2b51795e9dbdcaf46e4078b5851&oe=60010023'}} 
+                                    source={{uri: 'https://scontent.fsgn5-6.fna.fbcdn.net/v/t31.0-8/28619103_2034912613428758_7493420670478077899_o.jpg?_nc_cat=106&ccb=2&_nc_sid=174925&_nc_ohc=RrybHr2rMN8AX_DGvVK&_nc_ht=scontent.fsgn5-6.fna&oh=6c4626c2050c28e40507bfdb9e896470&oe=603C53A3'}} 
                                     style={{ width: 54, height: 54, borderRadius: 120 }} 
                                     />
                                 </View>
