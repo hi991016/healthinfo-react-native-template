@@ -63,17 +63,22 @@ const StatisticScreen = () => {
                             <View>
                                 <Image style={styles.icon} source={require('../assets/distance.png')} resizeMode='contain' />
                                 <Text style={{marginTop: 15, fontSize: 18}}>1.24</Text>
-                                <Text style={{fontSize: 14, color: '#9e9e9e'}}>Kilometers</Text>
+                                <Text style={{fontSize: 14, color: '#9e9e9e'}}>Meters</Text>
                             </View>
                             <View>
-                                <Image style={styles.icon} source={require('../assets/steps.png')} resizeMode='contain' />
+                                <Image style={styles.icon} source={require('../assets/clock.png')} resizeMode='contain' />
+                                <Text style={{marginTop: 15, fontSize: 18}}>1.24</Text>
+                                <Text style={{fontSize: 14, color: '#9e9e9e'}}>Minutes</Text>
+                            </View>
+                            <View>
+                                <Image style={styles.icon} source={require('../assets/speed.png')} resizeMode='contain' />
                                 <Text style={{marginTop: 15, fontSize: 18}}>144</Text>
-                                <Text style={{fontSize: 14, color: '#9e9e9e'}}>Steps</Text>
+                                <Text style={{fontSize: 14, color: '#9e9e9e'}}>m/s</Text>
                             </View>
                             <View>
                                 <Image style={styles.icon} source={require('../assets/calo.png')} resizeMode='contain' />
                                 <Text style={{marginTop: 15, fontSize: 18}}>87</Text>
-                                <Text style={{fontSize: 14, color: '#9e9e9e'}}>Calories</Text>
+                                <Text style={{fontSize: 14, color: '#9e9e9e'}}>Calories/s</Text>
                             </View>
                         </View>
                     </View>

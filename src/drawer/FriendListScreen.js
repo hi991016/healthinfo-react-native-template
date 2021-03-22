@@ -70,7 +70,7 @@ const FriendListScreen = ({navigation}) => {
                                 </View>
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
-                                <TouchableOpacity activeOpacity={0.5} style={styles.customChallenge}>
+                                <TouchableOpacity activeOpacity={0.5} style={styles.customChallenge} onPress={() => navigation.navigate('StartCompetition')}>
                                     <Text style={{color: '#fff', fontSize: 15}}>Challenge</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.5} style={{marginLeft: 10}}>

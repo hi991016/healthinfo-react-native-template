@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { ImageBackground, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import * as Animatable from 'react-native-animatable';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-export default class RunScreen extends Component {
+export default class StartCompetition extends Component {
     constructor(props) {
         super(props);
      
@@ -57,7 +57,7 @@ export default class RunScreen extends Component {
           seconds_Counter: '00',
           startDisable : false,
         });
-        this.props.navigation.navigate('EndActivity')
+        this.props.navigation.navigate('StopCompetition')
     }
     
     render() {
@@ -67,7 +67,7 @@ export default class RunScreen extends Component {
                 <SafeAreaView style={styles.container}>
                     <View style={styles.ladding}>
                         <View style={styles.headerContainer}>
-
+                            
                         </View>
                         <Animatable.View 
                             style={styles.footer}
@@ -136,11 +136,12 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%',
-        backgroundColor: '#000'
+        backgroundColor: '#000',
+        position: 'relative',
     },
     headerContainer: {
         flex: 1,
-        alignItems: 'center', 
+        alignItems: 'center',
     },
     footer: {
         flex: 0.6,
@@ -205,7 +206,5 @@ const styles = StyleSheet.create({
         color: '#000', 
         fontWeight: '700', 
         fontSize: 30
-    }
+    },
 })
-
-

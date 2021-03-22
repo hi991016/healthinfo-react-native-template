@@ -130,7 +130,8 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         marginTop: 10,
-        color: '#fff'
+        color: '#fff',
+        textTransform: 'capitalize'
     },
     userInfo: {
         alignItems: 'center', 

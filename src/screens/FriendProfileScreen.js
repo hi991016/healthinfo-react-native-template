@@ -2,7 +2,7 @@ import React from 'react'
 import { StatusBar, StyleSheet, Text, View, Image, SafeAreaView } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 
-const ProfileScreen = ({navigation}) => {
+const FriendProfileScreen = ({navigation}) => {
     return (
         <>
             <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -18,7 +18,7 @@ const ProfileScreen = ({navigation}) => {
                     <View style={styles.backgroundContainer}>
                         <View style={styles.profileImage}>
                             <Image source={require("../assets/avatar.jpg")} style={styles.avatar} />
-                            <Text style={styles.name}>cáo fennec</Text>
+                            <Text style={styles.name}>Cáo Fennec</Text>
                             <Text style={{fontSize: 14, color: '#00bcd4'}}>Male</Text>
                         </View>
                         <View style={styles.info}>
@@ -113,7 +113,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '600',
         marginTop: 12,
-        textTransform: 'capitalize',
     },
     subtext: {
         fontSize: 14,

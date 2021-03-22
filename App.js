@@ -28,6 +28,8 @@ import Search from './src/drawer/SearchScreen';
 import Running from './src/screens/RunScreen';
 import Loader from './src/component/Loader';
 import EndActivityScreen from './src/screens/EndActivityScreen';
+import StartCompetition from './src/screens/StartCompetition';
+import StopCompetition from './src/screens/StopCompetition';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -45,6 +47,8 @@ function DrawerHome() {
             <Drawer.Screen name="Running" component={Running} />
             <Drawer.Screen name="EndActivity" component={EndActivityScreen} />
             {/* I can't hide the bottom tab RunScreen so I chose this option. hehe */}
+            <Drawer.Screen name="StartCompetition" component={StartCompetition} />
+            <Drawer.Screen name="StopCompetition" component={StopCompetition} />
         </Drawer.Navigator>
     </>
   );
