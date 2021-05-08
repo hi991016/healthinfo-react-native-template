@@ -10,11 +10,15 @@ import {
     DrawerItem
 } from '@react-navigation/drawer';
 import Feather from 'react-native-vector-icons/Feather';
+import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign  from 'react-native-vector-icons/AntDesign';
 import Ionicons  from 'react-native-vector-icons/Ionicons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+import { useTranslation } from 'react-i18next';
+
 const DrawerMenu = (props) => {
+    const { t, i18n } = useTranslation();
     return (
         <>
             <SafeAreaView style={{ flex: 1 }}>
@@ -58,7 +62,7 @@ const DrawerMenu = (props) => {
                                 icon={({ size }) => (
                                     <Feather name="home" color='#1f2233' size={size} />
                                 )}
-                                label="Home"
+                                label={t('home_drawer')}
                                 onPress={() => { props.navigation.navigate('Home') }}
                                 labelStyle={{ color: '#1f2233' }}
                             />
@@ -66,15 +70,15 @@ const DrawerMenu = (props) => {
                                 icon={({ size }) => (
                                     <Feather name="calendar" color='#1f2233' size={size} />
                                 )}
-                                label="Diary"
-                                onPress={() => { props.navigation.navigate('Statistics') }}
+                                label={t('diary_drawer')}
+                                onPress={() => { props.navigation.navigate(t('tabBottom_diary')) }}
                                 labelStyle={{ color: '#1f2233' }}
                             />
                             <DrawerItem
                                 icon={({ size }) => (
                                     <AntDesign name="notification" color='#1f2233' size={size} />
                                 )}
-                                label="Notifications"
+                                label={t('notifications_drawer')}
                                 onPress={() => { props.navigation.navigate('Notification') }}
                                 labelStyle={{ color: '#1f2233' }}
                             />
@@ -82,7 +86,7 @@ const DrawerMenu = (props) => {
                                 icon={({ size }) => (
                                     <Ionicons name="people-outline" color='#1f2233' size={size} />
                                 )}
-                                label="Friends List"
+                                label={t('friendslist_drawer')}
                                 onPress={() => { props.navigation.navigate('FriendsList') }}
                                 labelStyle={{ color: '#1f2233' }}
                             />
@@ -90,7 +94,7 @@ const DrawerMenu = (props) => {
                                 icon={({ size }) => (
                                     <Ionicons name="search-outline" color='#1f2233' size={size} />
                                 )}
-                                label="Search"
+                                label={t('search_drawer')}
                                 onPress={() => { props.navigation.navigate('Search') }}
                                 labelStyle={{ color: '#1f2233' }}
                             />
@@ -101,8 +105,16 @@ const DrawerMenu = (props) => {
                                 icon={({ size }) => (
                                     <AntDesign name="setting" color='#1f2233' size={size} />
                                 )}
-                                label="Settings"
+                                label={t('settings_drawer')}
                                 onPress={() => { props.navigation.navigate('Setting') }}
+                                labelStyle={{ color: '#1f2233' }}
+                            />
+                            <DrawerItem
+                                icon={({ size }) => (
+                                    <Entypo name="language" color='#1f2233' size={size} />
+                                )}
+                                label={t('language_drawer')}
+                                onPress={() => { props.navigation.navigate('Language') }}
                                 labelStyle={{ color: '#1f2233' }}
                             />
                 </DrawerContentScrollView>
@@ -111,7 +123,7 @@ const DrawerMenu = (props) => {
                         icon={({ size }) => (
                             <AntDesign name="poweroff" color='#1f2233' size={size} />
                         )}
-                        label="Log Out"
+                        label={t('logout_drawer')}
                         labelStyle={{ fontWeight: 'bold', color: '#1f2233' }}
                         onPress={() => {props.navigation.navigate('LoginSplash')}}
                     />

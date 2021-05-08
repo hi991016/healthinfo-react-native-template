@@ -3,8 +3,11 @@ import { SafeAreaView, StyleSheet, Text, View, StatusBar, Image } from 'react-na
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Searchbar } from 'react-native-paper';
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const SearchScreen = ({navigation}) => {
+    const { t, i18n } = useTranslation();
     const [searchQuery, setSearchQuery] = React.useState('');
     const [keyword, setKeyword] = React.useState('');
     const onChangeSearch = query => setSearchQuery(query);
@@ -14,7 +17,7 @@ const SearchScreen = ({navigation}) => {
             <SafeAreaView style={styles.container}>
                     <View style={styles.headerContainer}>
                         <View>
-                            <Text style={styles.title}>Search</Text>
+                            <Text style={styles.title}>{t('searchScreen_title')}</Text>
                         </View>
                         <View>
                             <TouchableOpacity style={styles.iconClose} onPress={() => {navigation.goBack()}}>
@@ -24,7 +27,7 @@ const SearchScreen = ({navigation}) => {
                     </View>
                     <View style={styles.searchContainer}>
                         <Searchbar
-                        placeholder="Search"
+                        placeholder={t('searchScreen_search')}
                         onChangeText={onChangeSearch}
                         value={searchQuery}
                         style={{
@@ -52,7 +55,7 @@ const SearchScreen = ({navigation}) => {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customAdd}>
-                                    <Text style={{color: '#fff', fontSize: 14}}>Add Friend</Text>
+                                    <Text style={{color: '#fff', fontSize: 14}}>{t('searchScreen_add')}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -71,7 +74,7 @@ const SearchScreen = ({navigation}) => {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customAdd}>
-                                    <Text style={{color: '#fff', fontSize: 14}}>Add Friend</Text>
+                                    <Text style={{color: '#fff', fontSize: 14}}>{t('searchScreen_add')}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>

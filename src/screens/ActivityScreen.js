@@ -13,8 +13,11 @@ import {
 import { ScrollView } from "react-native-gesture-handler";
 import Carousel from "react-native-anchor-carousel";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const ActivityScreen = ({ navigation }) => {
+  const { t } = useTranslation();
   const [background, setBackground] = useState({
     uri:
       "https://cutewallpaper.org/21/cute-wallpaper-for-dp/Images-of-Whatsapp-Wallpaper-Whatsapp-Dp-Images-Download.jpg",
@@ -67,7 +70,7 @@ const ActivityScreen = ({ navigation }) => {
             }}
           >
             <Image source={{ uri: item.image }} style={styles.carouselImage} />
-            <Text style={styles.carouselText}>{item.title}</Text>
+            <Text style={styles.carouselText}>{t(item.title)}</Text>
           </TouchableOpacity>
         </View>
       </>
@@ -96,8 +99,8 @@ const ActivityScreen = ({ navigation }) => {
             >
               <View style={styles.headerContainer}>
                 <View>
-                  <Text style={styles.title}>Choose your</Text>
-                  <Text style={styles.title}>Activity</Text>
+                  <Text style={styles.title}>{t('activityScreen_title')}</Text>
+                  <Text style={styles.title}>{t('activityScreen_title2')}</Text>
                 </View>
                 <View style={styles.iconCompetition}>
                   <TouchableOpacity activeOpacity={0.5} onPress={() => { navigation.navigate('FriendsList') }}>
@@ -129,7 +132,7 @@ const ActivityScreen = ({ navigation }) => {
               </View>
               <View style={styles.InfoContainer}>
                 <View style={{ justifyContent: "center" }}>
-                  <Text style={styles.activityDesc}>{background.desc}</Text>
+                  <Text style={styles.activityDesc}>{t(background.desc)}</Text>
                 </View>
               </View>
               <View style={{ alignItems: "center", marginTop: 30 }}>
@@ -143,7 +146,7 @@ const ActivityScreen = ({ navigation }) => {
                     <Text
                       style={{ color: "#000", fontSize: 16, fontWeight: "700" }}
                     >
-                      Let's Go
+                      {t('activityScreen_go')}
                     </Text>
                   </View>
                 </TouchableOpacity>
@@ -217,9 +220,11 @@ const styles = StyleSheet.create({
         color: "#fff",
         position: "absolute",
         bottom: "40%",
-        left: "18%",
+        left: 0,
         fontWeight: "700",
         fontSize: 25,
+        textAlign: 'center',
+        width: '100%',
     },
     activityDesc: {
         paddingHorizontal: 30,

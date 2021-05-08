@@ -5,8 +5,11 @@ import * as Animatable from 'react-native-animatable';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const EndActivityScreen = ({navigation}) => {
+    const { t, i18n } = useTranslation();
     return (
         <>
             <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -22,8 +25,8 @@ const EndActivityScreen = ({navigation}) => {
                     showsHorizontalScrollIndicator={false}  
                     >
                         <View style={styles.headerContainer}>
-                            <Text style={styles.title}>About your</Text>
-                            <Text style={styles.title}>Body</Text>
+                            <Text style={styles.title}>{t('endScreen_title')}</Text>
+                            <Text style={styles.title}>{t('endScreen_title2')}</Text>
                         </View>
                         <View style={styles.avatarContainer}>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
@@ -40,7 +43,7 @@ const EndActivityScreen = ({navigation}) => {
                         </View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 30}}>
                             <View style={styles.customBox1}>
-                                <Text style={{fontSize: 15, color: '#fff', fontWeight: '700'}}>RUNNING</Text>
+                                <Text style={{fontSize: 15, color: '#fff', fontWeight: '700'}}>{t('endScreen_running')}</Text>
                             </View>
                             <View style={styles.customBox2}>
                                 <Text style={{fontSize: 15, color: '#fff', fontWeight: '700'}}>16/10/2021</Text>
@@ -68,7 +71,7 @@ const EndActivityScreen = ({navigation}) => {
                         </View>
                         <View>
                             <TouchableOpacity activeOpacity={0.8} style={styles.button} onPress={() => navigation.navigate('HomeDrawer')}>
-                                <Text style={{fontSize: 18, color: '#000', fontWeight: '700'}}>Back</Text>
+                                <Text style={{fontSize: 18, color: '#000', fontWeight: '700'}}>{t('endScreen_back')}</Text>
                             </TouchableOpacity>
                         </View>
                     </ScrollView>

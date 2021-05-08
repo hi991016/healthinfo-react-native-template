@@ -1,0 +1,73 @@
+{
+    "homeScreen_title": "Activity",
+    "Heart rate": "Heart rate",
+    "Calories": "Calories",
+    "Steps": "Steps",
+    "Distance": "Distance",
+
+    "profileScreen_title": "Your Profile",
+    "profileScreen_weight": "Your weight",
+    "profileScreen_height": "Your height",
+    "profileScreen_edit": "Edit Profile",
+    "profileScreen_password": "Change Password",
+    "profileScreen_logout": "Log out",
+    "profileScreen_male": "Male",
+    "profileScreen_female": "Female",
+
+    "diaryScreen_title": "Diary",
+    "diaryScreen_running": "Running",
+    "diaryScreen_walking": "Walking",
+
+    "activityScreen_title": "Choose your",
+    "activityScreen_title2": "Activity",
+    "WALKING": "WALKING",
+    "RUNNING": "RUNNING",
+    "CYCLING": "CYCLING",
+    "Walking is a great way to improve or maintain your overall health. Just 30 minutes every day can increase cardiovascular fitness, strengthen bones, and boost muscle power and endurance.": "Walking is a great way to improve or maintain your overall health. Just 30 minutes every day can increase cardiovascular fitness, strengthen bones, and boost muscle power and endurance.",
+    "Runners have increased lung capacity from logging mile after mile. Those strong lungs come in handy if you ever find yourself on the other side of the race as a spectator.": "Runners have increased lung capacity from logging mile after mile. Those strong lungs come in handy if you ever find yourself on the other side of the race as a spectator.",
+    "Easy – unlike some other sports, cycling does not require high levels of physical skill. Most people know how to ride a bike and, once you learn, you don’t forget.": "Easy – unlike some other sports, cycling does not require high levels of physical skill. Most people know how to ride a bike and, once you learn, you don’t forget.",
+    "activityScreen_go": "Let's Go",
+
+    "startScreen_go": "GO",
+    "startScreen_time": "TIME",
+    "startScreen_distance": "Distance",
+    "startScreen_pace": "Pace",
+    "startScreen_calories": "Calories",
+
+    "endScreen_title": "About your",
+    "endScreen_title2": "Body",
+    "endScreen_running": "Running",
+    "endScreen_back": "Back",
+
+    "home_drawer": "Home",
+    "diary_drawer": "Diary",
+    "notifications_drawer": "Notifications",
+    "friendslist_drawer": "Friends List",
+    "search_drawer": "Search",
+    "settings_drawer": "Settings",
+    "language_drawer": "Language",
+    "logout_drawer": "Log Out",
+    
+    "friendScreen_title": "Friends List",
+    "friendScreen_challenge": "Challenge",
+    "friendScreen_search": "Search",
+
+    "searchScreen_title": "Search",
+    "searchScreen_add": "Add Friend",
+    "searchScreen_search": "Search",
+
+    "notifyScreen_title": "Notifications",
+    "Friend Request": "Friend Request",
+    "Challenge Request": "Challenge Request",
+    "notifyScreen_accept": "Accept",
+    "notifyScreen_reject": "Reject",
+
+    "tabBottom_home": "Home",
+    "tabBottom_activity": "Activity",
+    "tabBottom_diary": "Diary",
+    "tabBottom_profile": "Profile",
+    
+    "language_title": "Language",
+    "language_english": "English",
+    "language_vietnam": "Vietnamese"
+}

@@ -4,8 +4,11 @@ import { ScrollView } from 'react-native-gesture-handler'
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const StatisticScreen = () => {
+    const { t, i18n } = useTranslation();
     return (
         <>
             <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -17,7 +20,7 @@ const StatisticScreen = () => {
                     >
                     <View style={styles.headerContainer}>
                         <View>
-                            <Text style={styles.title}>Diary</Text>
+                            <Text style={styles.title}>{t('diaryScreen_title')}</Text>
                         </View>
                         <View>
                             <TouchableOpacity style={styles.iconRef}>
@@ -28,7 +31,7 @@ const StatisticScreen = () => {
                     <View>
                         <View style={styles.subContainer}>
                             <View>
-                                <Text style={styles.nameActivity}>Running</Text>
+                                <Text style={styles.nameActivity}>{t('diaryScreen_running')}</Text>
                             </View>
                             <View style={styles.dot}></View>
                             <Text style={styles.day}>02/02/2020</Text>
@@ -54,7 +57,7 @@ const StatisticScreen = () => {
                     <View>
                         <View style={styles.subContainer}>
                             <View>
-                                <Text style={styles.nameActivity}>Walking</Text>
+                                <Text style={styles.nameActivity}>{t('diaryScreen_walking')}</Text>
                             </View>
                             <View style={styles.dot}></View>
                             <Text style={styles.day}>02/01/2020</Text>

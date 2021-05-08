@@ -1,10 +1,15 @@
 import React from 'react'
 import { Image, SafeAreaView, StatusBar, StyleSheet, Text, View,} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
+import Entypo from 'react-native-vector-icons/Entypo'
 import MenuItem from './MenuItem'
+import RNRestart from 'react-native-restart';
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const HomeScreen = ({navigation}) => {
+    const { t, i18n } = useTranslation();
+
     return (
         <>
         <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -17,20 +22,39 @@ const HomeScreen = ({navigation}) => {
                         </TouchableOpacity>
                     </View>
                     <View>
-                        <TouchableOpacity activeOpacity={0.8} onPress={() => { navigation.navigate('Profile') }}>
+                        <TouchableOpacity activeOpacity={0.8} onPress={() => { navigation.navigate(t('tabBottom_profile')) }}>
                             <Image style={styles.profileImage} source={require('../assets/avatar.jpg')} />
                         </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.refresh}>
                     <View>
-                        <Text style={styles.title}>Activity</Text>
+                        <Text style={styles.title}>{t('homeScreen_title')}</Text>
                     </View>
                     <View>
-                        <TouchableOpacity style={styles.iconRef}>
-                            <SimpleLineIcons name="refresh" color='#e52a2a' size={28} /> 
+                        <TouchableOpacity 
+                            style={styles.iconRef}
+                            onPress={() => {
+                                i18n.changeLanguage(i18n.language === 'en' ? 'vn' : 'en').then(() => {
+                                    // RNRestart.Restart();
+                                });
+                            }}
+                            >
+                            <Entypo name="language" color='#e52a2a' size={28} /> 
                         </TouchableOpacity>
                     </View>
+                    {/* <View>
+                        <TouchableOpacity 
+                            style={styles.iconRef}
+                            onPress={() => {
+                                i18n.changeLanguage(i18n.language === 'en' || 'vi' ? 'de' : 'en').then(() => {
+                                    // RNRestart.Restart();
+                                });
+                            }}
+                            >
+                            <SimpleLineIcons name="refresh" color='#e52a2a' size={28} /> 
+                        </TouchableOpacity>
+                    </View> */}
                 </View>
                 <MenuItem />
             </View>

@@ -4,6 +4,8 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Entypo from 'react-native-vector-icons/Entypo'
 import { Searchbar } from 'react-native-paper';
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const wait = (timeout) => {
     return new Promise(resolve => {
@@ -13,6 +15,7 @@ const wait = (timeout) => {
 
 const FriendListScreen = ({navigation}) => {
     const [refreshing, setRefreshing] = React.useState(false);
+    const { t, i18n } = useTranslation();
 
     const onRefresh = React.useCallback(() => {
       setRefreshing(true);
@@ -29,7 +32,7 @@ const FriendListScreen = ({navigation}) => {
             <SafeAreaView style={styles.container}>
                 <View style={styles.headerContainer}>
                     <View>
-                        <Text style={styles.title}>Friends List</Text>
+                        <Text style={styles.title}>{t('friendScreen_title')}</Text>
                     </View>
                     <View>
                         <TouchableOpacity style={styles.iconClose} onPress={() => {navigation.goBack()}}>
@@ -39,7 +42,7 @@ const FriendListScreen = ({navigation}) => {
                 </View>
                 <View style={styles.searchContainer}>
                     <Searchbar
-                    placeholder="Search"
+                    placeholder={t('friendScreen_search')}
                     onChangeText={onChangeSearch}
                     value={searchQuery}
                     style={{
@@ -71,7 +74,7 @@ const FriendListScreen = ({navigation}) => {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customChallenge} onPress={() => navigation.navigate('StartCompetition')}>
-                                    <Text style={{color: '#fff', fontSize: 15}}>Challenge</Text>
+                                    <Text style={{color: '#fff', fontSize: 15}}>{t('friendScreen_challenge')}</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.5} style={{marginLeft: 10}}>
                                     <Entypo name="dots-three-vertical" color='#000' size={18} /> 
@@ -93,7 +96,7 @@ const FriendListScreen = ({navigation}) => {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customChallenge}>
-                                    <Text style={{color: '#fff', fontSize: 15}}>Challenge</Text>
+                                    <Text style={{color: '#fff', fontSize: 15}}>{t('friendScreen_challenge')}</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.5} style={{marginLeft: 10}}>
                                     <Entypo name="dots-three-vertical" color='#000' size={18} /> 
@@ -115,7 +118,7 @@ const FriendListScreen = ({navigation}) => {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customChallenge}>
-                                    <Text style={{color: '#fff', fontSize: 15}}>Challenge</Text>
+                                    <Text style={{color: '#fff', fontSize: 15}}>{t('friendScreen_challenge')}</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.5} style={{marginLeft: 10}}>
                                     <Entypo name="dots-three-vertical" color='#000' size={18} /> 

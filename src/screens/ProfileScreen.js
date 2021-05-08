@@ -1,8 +1,11 @@
 import React from 'react'
 import { StatusBar, StyleSheet, Text, View, Image, SafeAreaView } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const ProfileScreen = ({navigation}) => {
+    const { t, i18n } = useTranslation();
     return (
         <>
             <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -13,36 +16,36 @@ const ProfileScreen = ({navigation}) => {
                     showsHorizontalScrollIndicator={false}                   
                     >
                     <View style={styles.headerContainer}>
-                        <Text style={styles.title}>Your Profile</Text>
+                        <Text style={styles.title}>{t('profileScreen_title')}</Text>
                     </View>
                     <View style={styles.backgroundContainer}>
                         <View style={styles.profileImage}>
                             <Image source={require("../assets/avatar.jpg")} style={styles.avatar} />
                             <Text style={styles.name}>cáo fennec</Text>
-                            <Text style={{fontSize: 14, color: '#00bcd4'}}>Male</Text>
+                            <Text style={{fontSize: 14, color: '#00bcd4'}}>{t('profileScreen_male')}</Text>
                         </View>
                         <View style={styles.info}>
                             <View style={{ alignItems: 'center', borderColor: '#EAEAEA', borderRightWidth: 2, }}>
                                 <View style={{alignItems: 'center', right: 45}}>
                                     <Text style={{ fontSize: 20 }}>51 kg</Text>
-                                    <Text style={styles.subtext}>Your weight</Text>
+                                    <Text style={styles.subtext}>{t('profileScreen_weight')}</Text>
                                 </View>
                             </View>
                             <View style={{ alignItems: 'center', left: 45 }}>
                                 <Text style={{ fontSize: 20 }}>171 cm</Text>
-                                <Text style={styles.subtext}>Your height</Text>
+                                <Text style={styles.subtext}>{t('profileScreen_height')}</Text>
                             </View>
                         </View>
                     </View>
                     <View style={styles.setting}>
                         <TouchableOpacity onPress={() => { navigation.navigate('EditProfile') }}>
-                            <Text style={{ color: "#1f2233", fontSize: 19 }}>Edit Profile</Text>
+                            <Text style={{ color: "#1f2233", fontSize: 19 }}>{t('profileScreen_edit')}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => { navigation.navigate('ChangePassword') }}>
-                            <Text style={ { color: "#1f2233", fontSize: 19, marginTop: 18 }}>Change Password</Text>
+                            <Text style={ { color: "#1f2233", fontSize: 19, marginTop: 18 }}>{t('profileScreen_password')}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => { navigation.navigate('LoginSplash') }}>
-                            <Text style={ { color: "red", fontSize: 19, marginTop: 18 }}>Log out</Text>
+                            <Text style={ { color: "red", fontSize: 19, marginTop: 18 }}>{t('profileScreen_logout')}</Text>
                         </TouchableOpacity>
                     </View>
                     </ScrollView>

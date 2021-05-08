@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import * as Animatable from 'react-native-animatable';
 import Ionicons from 'react-native-vector-icons/Ionicons'
+// the hook
+import { withTranslation  } from 'react-i18next';
 
-export default class RunScreen extends Component {
+class RunScreen extends Component {
     constructor(props) {
         super(props);
      
@@ -61,6 +63,7 @@ export default class RunScreen extends Component {
     }
     
     render() {
+        const { t } = this.props;
         return (
             <>
                 <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -86,7 +89,7 @@ export default class RunScreen extends Component {
                                         onPress={this.onButtonStart}
                                         style={[styles.iconGo, { backgroundColor:  this.state.startDisable ? '#e48c12' : '#fff'}]} 
                                         disabled={this.state.startDisable}>
-                                            <Text style={{fontSize: 22, color: '#000', fontWeight: '700'}}>GO</Text>
+                                            <Text style={styles.titleGo}>{t('startScreen_go')}</Text>
                                         </TouchableOpacity>  
                                         <TouchableOpacity 
                                         activeOpacity={0.5} 
@@ -99,19 +102,19 @@ export default class RunScreen extends Component {
                                     <View style={styles.line}></View>
                                     <View style={styles.distance}>
                                         <Text style={styles.counterText}>{this.state.minutes_Counter} : {this.state.seconds_Counter}</Text>
-                                        <Text style={{color: '#000', fontWeight: '700', fontSize: 12}}>TIME</Text>
+                                        <Text style={{color: '#000', fontWeight: '700', fontSize: 12}}>{t('startScreen_time')}</Text>
                                     </View>
                                     <View style={styles.infoRunning}>
                                         <View style={{flexDirection: 'column', alignItems: 'center'}}>
-                                            <Text style={{color: '#000', fontSize: 15}}>Distance</Text>
+                                            <Text style={{color: '#000', fontSize: 15}}>{t('startScreen_distance')}</Text>
                                             <Text style={styles.textInfo}>0,0 <Text style={{fontSize: 10, fontWeight: '700'}}>KM</Text></Text>
                                         </View>
                                         <View style={{flexDirection: 'column', alignItems: 'center'}}>
-                                            <Text style={{color: '#000', fontSize: 15}}>Pace</Text>
+                                            <Text style={{color: '#000', fontSize: 15}}>{t('startScreen_pace')}</Text>
                                             <Text style={styles.textInfo}>--</Text>
                                         </View>
                                         <View style={{flexDirection: 'column', alignItems: 'center'}}>
-                                            <Text style={{color: '#000', fontSize: 15}}>Calories</Text>
+                                            <Text style={{color: '#000', fontSize: 15}}>{t('startScreen_calories')}</Text>
                                             <Text style={styles.textInfo}>0 <Text style={{fontSize: 10, fontWeight: '700'}}>KCAL</Text></Text>
                                         </View>
                                     </View>
@@ -123,6 +126,8 @@ export default class RunScreen extends Component {
         )
     }
 }
+
+export default withTranslation()(RunScreen);
 
 const styles = StyleSheet.create({
     container: {
@@ -168,11 +173,19 @@ const styles = StyleSheet.create({
         borderRadius: 120,
     },
     iconGo: {
-        backgroundColor: '#fff',
-        padding: 30,
-        borderRadius: 100,
+        // backgroundColor: '#fff',
+        // width: 75,
+        // height: 75,
+        // borderRadius: 60,
+        // top: -20,
+        // // borderWidth: 3,
+        borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
+        width: Dimensions.get('window').width * 0.19,
+        height: Dimensions.get('window').width * 0.19,
+        backgroundColor:'#fff',
+        justifyContent: 'center',
+        alignItems: 'center',
         top: -20,
-        // borderWidth: 3
     },
     line: {
         backgroundColor: '#000',
@@ -205,6 +218,11 @@ const styles = StyleSheet.create({
         color: '#000', 
         fontWeight: '700', 
         fontSize: 30
+    },
+    titleGo: {
+        fontSize: 20, 
+        color: '#000', 
+        fontWeight: '700',
     }
 })
 

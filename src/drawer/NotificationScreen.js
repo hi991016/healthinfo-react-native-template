@@ -3,6 +3,8 @@ import { RefreshControl, SafeAreaView, StatusBar, StyleSheet, Text, View, Image 
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const wait = (timeout) => {
     return new Promise(resolve => {
@@ -11,6 +13,7 @@ const wait = (timeout) => {
 }
 
 function FriendRequest({navigation}) {
+    const { t, i18n } = useTranslation();
     const [refreshing, setRefreshing] = React.useState(false);
 
     const onRefresh = React.useCallback(() => {
@@ -44,10 +47,10 @@ function FriendRequest({navigation}) {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customConfirm}>
-                                    <Text style={{color: '#fff', fontSize: 13}}>Accept</Text>
+                                    <Text style={{color: '#fff', fontSize: 13}}>{t('notifyScreen_accept')}</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customReject}>
-                                    <Text style={{color: '#00ACE2', fontSize: 13}}>Reject</Text>
+                                    <Text style={{color: '#00ACE2', fontSize: 13}}>{t('notifyScreen_reject')}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -66,10 +69,10 @@ function FriendRequest({navigation}) {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                             <TouchableOpacity activeOpacity={0.5} style={styles.customConfirm}>
-                                    <Text style={{color: '#fff', fontSize: 13}}>Accept</Text>
+                                    <Text style={{color: '#fff', fontSize: 13}}>{t('notifyScreen_accept')}</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customReject}>
-                                    <Text style={{color: '#00ACE2', fontSize: 13}}>Reject</Text>
+                                    <Text style={{color: '#00ACE2', fontSize: 13}}>{t('notifyScreen_reject')}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -88,10 +91,10 @@ function FriendRequest({navigation}) {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customConfirm}>
-                                    <Text style={{color: '#fff', fontSize: 13}}>Accept</Text>
+                                    <Text style={{color: '#fff', fontSize: 13}}>{t('notifyScreen_accept')}</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customReject}>
-                                    <Text style={{color: '#00ACE2', fontSize: 13}}>Reject</Text>
+                                    <Text style={{color: '#00ACE2', fontSize: 13}}>{t('notifyScreen_reject')}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -103,6 +106,7 @@ function FriendRequest({navigation}) {
 }
 
 function ChallengeRequest({navigation}) {
+    const { t, i18n } = useTranslation();
     const [refreshing, setRefreshing] = React.useState(false);
 
     const onRefresh = React.useCallback(() => {
@@ -136,7 +140,7 @@ function ChallengeRequest({navigation}) {
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <TouchableOpacity activeOpacity={0.5} style={styles.customConfirm}>
-                                    <Text style={{color: '#fff', fontSize: 15}}>Accept</Text>
+                                    <Text style={{color: '#fff', fontSize: 15}}>{t('notifyScreen_accept')}</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.5} style={{marginLeft: 10}}>
                                     <AntDesign name="close" color='#595959' size={18} /> 
@@ -153,6 +157,7 @@ function ChallengeRequest({navigation}) {
 const Tab = createMaterialTopTabNavigator();
 
 function MyTabs() {
+    const { t, i18n } = useTranslation();
     return (
       <Tab.Navigator
         initialRouteName="FriendRequest"
@@ -173,36 +178,37 @@ function MyTabs() {
         <Tab.Screen
           name="FriendRequest"
           component={FriendRequest}
-          options={{ tabBarLabel: 'Friend Request' }}
+          options={{ tabBarLabel: t('Friend Request') }}
         />
         <Tab.Screen
           name="ChallengeRequest"
           component={ChallengeRequest}
-          options={{ tabBarLabel: 'Challenge Request' }}
+          options={{ tabBarLabel: t('Challenge Request') }}
         />
       </Tab.Navigator>
     );
 }
 
 export default function NotificationScreen({navigation}) {
-  return (
-      <>
-        <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
-        <SafeAreaView style={styles.container}>
-            <View style={styles.headerContainer}>
-                <View>
-                    <Text style={styles.title}>Notifications</Text>
-                </View>
-                <View>
-                    <TouchableOpacity style={styles.iconClose} onPress={() => {navigation.goBack()}}>
-                        <AntDesign name="closesquare" size={50} /> 
-                    </TouchableOpacity>
-                </View>
-            </View>       
-            <MyTabs />
-        </SafeAreaView>
-      </>
-  );
+    const { t, i18n } = useTranslation();
+    return (
+        <>
+            <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
+            <SafeAreaView style={styles.container}>
+                <View style={styles.headerContainer}>
+                    <View>
+                        <Text style={styles.title}>{t('notifyScreen_title')}</Text>
+                    </View>
+                    <View>
+                        <TouchableOpacity style={styles.iconClose} onPress={() => {navigation.goBack()}}>
+                            <AntDesign name="closesquare" size={50} /> 
+                        </TouchableOpacity>
+                    </View>
+                </View>       
+                <MyTabs />
+            </SafeAreaView>
+        </>
+    );
 }
   
 const styles = StyleSheet.create({

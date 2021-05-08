@@ -3,6 +3,9 @@ import { RefreshControl, StyleSheet, Text, View, Image, SafeAreaView } from 'rea
 import { FlatList } from 'react-native-gesture-handler'
 import * as Animatable from 'react-native-animatable';
 
+// the hook
+import { useTranslation } from 'react-i18next';
+
 const wait = (timeout) => {
     return new Promise(resolve => {
       setTimeout(resolve, timeout);
@@ -41,6 +44,8 @@ const data = [
 ]
 
 const MenuItem = () => {
+    const { t, i18n } = useTranslation();
+
     const [refreshing, setRefreshing] = React.useState(false);
 
     const onRefresh = React.useCallback(() => {
@@ -57,7 +62,7 @@ const MenuItem = () => {
                         <Text style={styles.info}>{item.info}</Text>
                         <Text style={styles.unit}>{item.unit}</Text>
                     </View>
-                    <Text style={styles.title}>{item.title}</Text>
+                    <Text style={styles.title}>{t(item.title)}</Text>
                 </View>
             </Animatable.View>
         )

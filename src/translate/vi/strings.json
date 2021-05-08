@@ -1,0 +1,73 @@
+{
+    "homeScreen_title": "Hoạt Động",
+    "Heart rate": "Nhịp tim",
+    "Calories": "Calo",
+    "Steps": "Bước chân",
+    "Distance": "Quãng đường",
+
+    "profileScreen_title": "Hồ Sơ",
+    "profileScreen_weight": "Cân năng",
+    "profileScreen_height": "Chiều cao",
+    "profileScreen_edit": "Chỉnh Sửa Hồ Sở",
+    "profileScreen_password": "Đổi Mật Khẩu",
+    "profileScreen_logout": "Đăng Xuất",
+    "profileScreen_male": "Nam",
+    "profileScreen_female": "Nữ",
+    
+    "diaryScreen_title": "Nhật Ký",
+    "diaryScreen_running": "Chạy Bộ",
+    "diaryScreen_walking": "Đi Bộ",
+
+    "activityScreen_title": "Chọn",
+    "activityScreen_title2": "Hoạt Động",
+    "WALKING": "ĐI BỘ",
+    "RUNNING": "CHẠY BỘ",
+    "CYCLING": "ĐẠP XE",
+    "Walking is a great way to improve or maintain your overall health. Just 30 minutes every day can increase cardiovascular fitness, strengthen bones, and boost muscle power and endurance.": "Đi bộ là một cách tuyệt vời để cải thiện hoặc duy trì sức khỏe tổng thể của bạn. Chỉ cần 30 phút mỗi ngày có thể tăng cường thể lực cho tim mạch, giúp xương chắc khỏe, tăng cường sức mạnh và sức bền của cơ bắp.",
+    "Runners have increased lung capacity from logging mile after mile. Those strong lungs come in handy if you ever find yourself on the other side of the race as a spectator.": "Những người chạy bộ đã tăng dung tích phổi từ việc khai thác hàng dặm này qua dặm khác. Những lá phổi mạnh mẽ đó rất hữu ích nếu bạn thấy mình ở phía bên kia cuộc đua với tư cách là một khán giả.",
+    "Easy – unlike some other sports, cycling does not require high levels of physical skill. Most people know how to ride a bike and, once you learn, you don’t forget.": "Dễ dàng - không giống như một số môn thể thao khác, đạp xe không đòi hỏi kỹ năng thể chất cao. Hầu hết mọi người đều biết cách đi xe đạp và một khi bạn đã học, bạn sẽ không quên.",
+    "activityScreen_go": "Bắt Đầu",
+    
+    "startScreen_go": "ĐI",
+    "startScreen_time": "THỜI GIAN",
+    "startScreen_distance": "Quãng đường",
+    "startScreen_pace": "Tốc độ",
+    "startScreen_calories": "Calo",
+    
+    "endScreen_title": "Thông Tin",
+    "endScreen_title2": "Cơ Thể",
+    "endScreen_running": "Chạy Bộ",
+    "endScreen_back": "Trở về",
+
+    "home_drawer": "Trang Chủ",
+    "diary_drawer": "Nhật Ký",
+    "notifications_drawer": "Thông Báo",
+    "friendslist_drawer": "Danh Sách Bạn Bè",
+    "search_drawer": "Tìm Kiếm",
+    "settings_drawer": "Cài Đặt",
+    "language_drawer": "Ngôn Ngữ",
+    "logout_drawer": "Đăng Xuất",
+
+    "friendScreen_title": "Bạn Bè",
+    "friendScreen_challenge": "Thách Đấu",
+    "friendScreen_search": "Tìm Kiếm",
+
+    "searchScreen_title": "Tìm Kiếm",
+    "searchScreen_add": "Thêm Bạn",
+    "searchScreen_search": "Tìm Kiếm",
+
+    "notifyScreen_title": "Thông Báo",
+    "Friend Request": "Yêu Cầu Kết Bạn",
+    "Challenge Request": "Yêu Cầu Thách Đấu",
+    "notifyScreen_accept": "Đồng Ý",
+    "notifyScreen_reject": "Từ Chối",
+
+    "tabBottom_home": "Trang chủ",
+    "tabBottom_activity": "Hoạt động",
+    "tabBottom_diary": "Nhật ký",
+    "tabBottom_profile": "Hồ sơ",
+
+    "language_title": "Ngôn Ngữ",
+    "language_english": "Tiếng Anh",
+    "language_vietnam": "Tiếng Việt"
+  }
