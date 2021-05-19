@@ -3,8 +3,11 @@ import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { TextInput } from 'react-native-paper';
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const PasswordScreen = ({navigation}) => {
+    const { t } = useTranslation();
     return (
         <>
             <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -21,7 +24,7 @@ const PasswordScreen = ({navigation}) => {
                                 </TouchableOpacity>
                             </View>
                             <View>
-                                <Text style={styles.title}>Change Password</Text>
+                                <Text style={styles.title}>{t('password_title')}</Text>
                             </View>
                             <View>
                                 <TouchableOpacity style={styles.iconClose} onPress={() => {navigation.goBack()}}>
@@ -32,7 +35,7 @@ const PasswordScreen = ({navigation}) => {
                         <View style={{marginTop: 10}}>
                             <View style={styles.inputContainer}>
                                 <TextInput 
-                                placeholder={'Password'}
+                                placeholder={t('password_pwd')}
                                 underlineColor='transparent' 
                                 theme={{ colors: '#fff' }}
                                 placeholderTextColor = "#A5A3A3"
@@ -42,7 +45,7 @@ const PasswordScreen = ({navigation}) => {
                             </View>
                             <View style={styles.inputContainer}>
                                 <TextInput 
-                                placeholder={'New Password'}
+                                placeholder={t('password_new')}
                                 underlineColor='transparent' 
                                 theme={{ colors: '#fff' }}
                                 placeholderTextColor = "#A5A3A3"
@@ -52,7 +55,7 @@ const PasswordScreen = ({navigation}) => {
                             </View>
                             <View style={styles.inputContainer}>
                                 <TextInput 
-                                placeholder={'Confirm Password'}
+                                placeholder={t('password_confirm')}
                                 underlineColor='transparent' 
                                 theme={{ colors: '#fff' }}
                                 placeholderTextColor = "#A5A3A3"

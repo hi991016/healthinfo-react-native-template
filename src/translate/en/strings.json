@@ -69,5 +69,12 @@
     
     "language_title": "Language",
     "language_english": "English",
-    "language_vietnam": "Vietnamese"
+    "language_vietnam": "Vietnamese",
+
+    "editProfile_title": "Edit Profile",
+    "editProfile_change": "Change Photo",
+    "password_title": "Change Password",
+    "password_pwd": "Password",
+    "password_new": "New Password",
+    "password_confirm": "Confirm Password"
 }

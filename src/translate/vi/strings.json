@@ -69,5 +69,12 @@
 
     "language_title": "Ngôn Ngữ",
     "language_english": "Tiếng Anh",
-    "language_vietnam": "Tiếng Việt"
+    "language_vietnam": "Tiếng Việt",
+
+    "editProfile_title": "Chỉnh Sửa Hồ Sơ",
+    "editProfile_change": "Đổi Hình Ảnh",
+    "password_title": "Đổi Mật Khẩu",
+    "password_pwd": "Mật Khẩu Cũ",
+    "password_new": "Mật Khẩu Mới",
+    "password_confirm": "Xác Nhận Mật Khẩu"
   }

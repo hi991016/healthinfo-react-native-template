@@ -2,8 +2,11 @@ import React from 'react'
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, Image, TextInput } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import Ionicons from 'react-native-vector-icons/Ionicons'
+// the hook
+import { useTranslation } from 'react-i18next';
 
 const EditProfileScreen = ({navigation}) => {
+    const { t } = useTranslation();
     const [value, onChangeText] = React.useState('Cáo');
     return (
         <>
@@ -21,7 +24,7 @@ const EditProfileScreen = ({navigation}) => {
                                 </TouchableOpacity>
                             </View>
                             <View>
-                                <Text style={styles.title}>Edit Profile</Text>
+                                <Text style={styles.title}>{t('editProfile_title')}</Text>
                             </View>
                             <View>
                                 <TouchableOpacity style={styles.iconClose} onPress={() => {navigation.goBack()}}>
@@ -33,7 +36,7 @@ const EditProfileScreen = ({navigation}) => {
                             <View style={styles.profileImage}>
                                 <Image source={require("../assets/avatar.jpg")} style={styles.avatar} />
                                 <TouchableOpacity>
-                                    <Text style={{marginTop: 15, color: '#1f79ff', fontSize: 20}}>Change Photo</Text>
+                                    <Text style={{marginTop: 15, color: '#1f79ff', fontSize: 20}}>{t('editProfile_change')}</Text>
                                 </TouchableOpacity>
                             </View>
                             <View style={{marginHorizontal: 20}}>
