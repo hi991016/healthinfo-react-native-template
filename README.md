@@ -1,4 +1,4 @@
-#prototype
+#prototype:
 https://tinyurl.com/healthinfopro
 
 # HEALTHINFO
@@ -13,3 +13,5 @@ fix bug:
   + carousel: https://github.com/ajdinahmetovic/react-native-anchor-carousel/pull/1/files
   + vector-icon : react-native link react-native-vector-icons
 CÁO
+
+#Full Code: https://github.com/ManPham1999/HealthyInfoApp
